@@ -82,12 +82,14 @@ ph = json.loads((ROOT / "posthoc_out" / "posthoc_results.json").read_text(encodi
 ph2 = json.loads((ROOT / "posthoc_out" / "posthoc_review_results.json").read_text(encoding="utf-8"))["R3_questionnaire_only"]
 ph = dict(ph)
 ph["skill_Q_SR"], ph["auc_Q_SR"] = ph2["skill_questionnaire_selfreport"], ph2["auc_questionnaire_selfreport"]
+ph["skill_Q0"], ph["auc_Q0"] = ph2["skill_questionnaire_no_anthro"], ph2["auc_questionnaire_no_anthro"]
 items = [("Measured weight, height, waist + measured BP", "S0_full"),
          ("Measured weight and height + measured BP", "A1_no_tape"),
          ("Self-reported weight and height + measured BP", "A2_self_report"),
          ("Questionnaire only: self-reported weight/height, no BP", "Q_SR"),
-         ("No anthropometry (measured BP retained)", "S1_no_anthro")]
-fig, axs = plt.subplots(1, 2, figsize=(8.6, 3.2), sharey=True)
+         ("Questionnaire only, no body size, no BP", "Q0"),
+         ("No anthropometry, measured BP retained", "S1_no_anthro")]
+fig, axs = plt.subplots(1, 2, figsize=(8.6, 3.8), sharey=True)
 for ax, met, xl in [(axs[0], "skill", "Brier skill"), (axs[1], "auc", "AUROC")]:
     for k, (lab, key) in enumerate(items):
         v = ph[f"{met}_{key}"]
