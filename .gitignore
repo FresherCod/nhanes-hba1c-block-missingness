@@ -1,0 +1,12 @@
+# Dữ liệu thô NHANES: tải lại từ CDC bằng notebooks/01_data_audit.py
+data/
+# Đầu ra AI ban đầu, bản thảo, bài báo có bản quyền (không công bố ở đây)
+*.docx
+*.pdf
+!manuscript/figures/*.pdf
+manuscript/
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+final_out/dryrun_P/L_predictions.csv

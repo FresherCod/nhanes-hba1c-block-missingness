@@ -1,0 +1,18 @@
+{
+  "protocol": "v0.4",
+  "created": "2026-09-24 10:56:12",
+  "authorized_by": "Vincent (ủy quyền toàn bộ cho Claude, chat 2026-09-24)",
+  "L_loaded_into_models_before_lock": false,
+  "files": {
+    "protocol_v0.4.md": "8dad5686c4bbfc7b6ef378481c95ae64ca4f8ff8b3dac621e4cc5dfb79a8a00c",
+    "protocol_v0.3.md": "a315e8c1b2ee3b85ce1354679c86b13b04c1450bd293cd79aef54a0ac1ec87f0",
+    "decision_log.md": "4e2273bafda7f329ae8e297446225fac647bb9af34fcce0d379548aa47da5dc9",
+    "src/dev_pipeline.py": "acdf972d704782dcad9cfd4d6a4441020e9d19499329084554c4506b99ee2789",
+    "src/final_pipeline.py": "13df7d6cb9e1f72b95dc847223bdcaed0ba3f2a920f46dad9750326565adb6c3",
+    "src/nhanes_audit.py": "3196a7bbeab7a023e9c5e91557499d74bd876510f1fee645f80cdb152f41c3ce",
+    "notebooks/03a_train_P.py": "ea8e58fc83bdc93b2ae1297c7a3a4b785a595b934777870d429f35c038fadf28",
+    "notebooks/03b_evaluate_L.py": "33611dbbb822ab600e49106277a659749c4ba7676f98576795c81d41f91c063a",
+    "final_out/models_P.pkl": "5f7a6f6200820f6036ef8b7b7d9511ca2da6b0736aa3d9ddc34e8a7e4606390e",
+    "final_out/config_P.json": "754d9c207bc5bc48e5534d28866ce7018b88dbe97096ec8fd2d04beba1394b3e"
+  }
+}

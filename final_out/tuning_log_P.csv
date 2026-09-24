@@ -1,0 +1,181 @@
+learner,method,hp,wlogloss,label
+LR,BASE,0.03,0.10277058789137186,
+LR,BASE,0.1,0.10005411007234732,
+LR,BASE,0.3,0.09939737056860362,
+LR,BASE,1.0,0.09944087907604128,
+LR,AUG,0.03,0.10309756652403738,
+LR,AUG,0.1,0.1016439015970012,
+LR,AUG,0.3,0.10122225067290018,
+LR,AUG,1.0,0.10140878362877968,
+LR,PS-S0,0.03,0.10277058789137182,
+LR,PS-S0,0.1,0.10005411007235265,
+LR,PS-S0,0.3,0.09939737056917711,
+LR,PS-S0,1.0,0.09944087907604583,
+LR,PS-S1,0.03,0.10621932986782803,
+LR,PS-S1,0.1,0.10464176190502719,
+LR,PS-S1,0.3,0.1042179267732273,
+LR,PS-S1,1.0,0.10418251146077849,
+LR,PS-S2,0.03,0.10291261077309731,
+LR,PS-S2,0.1,0.09993317940489772,
+LR,PS-S2,0.3,0.09906030970574221,
+LR,PS-S2,1.0,0.09873477994917118,
+LR,PS-S3,0.03,0.10460586185980046,
+LR,PS-S3,0.1,0.1012596614911191,
+LR,PS-S3,0.3,0.10022856671157576,
+LR,PS-S3,1.0,0.10014303984033243,
+LR,PS-S4,0.03,0.10307139480541111,
+LR,PS-S4,0.1,0.10020357381566884,
+LR,PS-S4,0.3,0.09941420516145028,
+LR,PS-S4,1.0,0.09929660704220498,
+LR,PS-S5,0.03,0.10647836778157903,
+LR,PS-S5,0.1,0.10480203879201581,
+LR,PS-S5,0.3,0.10420263896200851,
+LR,PS-S5,1.0,0.10392316379086212,
+LR,PS-S6,0.03,0.10491298264623851,
+LR,PS-S6,0.1,0.1013316662501243,
+LR,PS-S6,0.3,0.10012697168878475,
+LR,PS-S6,1.0,0.09997171556442282,
+LGB,BASE,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.05}",0.10387332105684419,
+LGB,BASE,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.1}",0.11036921836509189,
+LGB,BASE,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.05}",0.10510421395169162,
+LGB,BASE,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.1}",0.11023714010395419,
+LGB,BASE,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.05}",0.1110450759007961,
+LGB,BASE,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.1}",0.12619985852393564,
+LGB,BASE,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.05}",0.11280984518958106,
+LGB,BASE,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.1}",0.12828717063844466,
+LGB,BASE,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.05}",0.12754058740541802,
+LGB,BASE,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.1}",0.15597141314903848,
+LGB,BASE,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.05}",0.12737378864548,
+LGB,BASE,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.1}",0.1553637278524843,
+LGB,AUG,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.05}",0.10397082074330273,
+LGB,AUG,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.1}",0.10640251846164889,
+LGB,AUG,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.05}",0.10387635402116115,
+LGB,AUG,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.1}",0.10676073826093856,
+LGB,AUG,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.05}",0.1072438912816907,
+LGB,AUG,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.1}",0.11512528880460732,
+LGB,AUG,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.05}",0.107193666693832,
+LGB,AUG,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.1}",0.11570310439836497,
+LGB,AUG,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.05}",0.11516876588259241,
+LGB,AUG,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.1}",0.1334299065189689,
+LGB,AUG,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.05}",0.11638634775980382,
+LGB,AUG,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.1}",0.13489074699372164,
+LGB,PS-S0,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.05}",0.10387332105684419,
+LGB,PS-S0,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.1}",0.11036921836509189,
+LGB,PS-S0,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.05}",0.10510421395169162,
+LGB,PS-S0,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.1}",0.11023714010395419,
+LGB,PS-S0,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.05}",0.1110450759007961,
+LGB,PS-S0,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.1}",0.12619985852393564,
+LGB,PS-S0,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.05}",0.11280984518958106,
+LGB,PS-S0,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.1}",0.12828717063844466,
+LGB,PS-S0,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.05}",0.12754058740541802,
+LGB,PS-S0,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.1}",0.15597141314903848,
+LGB,PS-S0,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.05}",0.12737378864548,
+LGB,PS-S0,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.1}",0.1553637278524843,
+LGB,PS-S1,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.05}",0.10820604859699176,
+LGB,PS-S1,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.1}",0.11331628687005837,
+LGB,PS-S1,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.05}",0.10742734937095606,
+LGB,PS-S1,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.1}",0.11192090954401507,
+LGB,PS-S1,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.05}",0.11206597327326527,
+LGB,PS-S1,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.1}",0.12157180673509095,
+LGB,PS-S1,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.05}",0.11111396498183854,
+LGB,PS-S1,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.1}",0.12266319306035553,
+LGB,PS-S1,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.05}",0.12176050828686957,
+LGB,PS-S1,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.1}",0.1419321932102083,
+LGB,PS-S1,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.05}",0.12321603279841242,
+LGB,PS-S1,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.1}",0.14468645383003118,
+LGB,PS-S2,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.05}",0.10369473763212919,
+LGB,PS-S2,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.1}",0.10843586040096309,
+LGB,PS-S2,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.05}",0.10341059999097901,
+LGB,PS-S2,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.1}",0.10812992588417923,
+LGB,PS-S2,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.05}",0.10979851801379682,
+LGB,PS-S2,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.1}",0.12333886993310209,
+LGB,PS-S2,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.05}",0.11050850790792509,
+LGB,PS-S2,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.1}",0.12200719113909783,
+LGB,PS-S2,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.05}",0.12270864044030454,
+LGB,PS-S2,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.1}",0.14867539459030263,
+LGB,PS-S2,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.05}",0.12406449836063568,
+LGB,PS-S2,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.1}",0.1516688331656091,
+LGB,PS-S3,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.05}",0.1049031646137316,
+LGB,PS-S3,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.1}",0.11159029685830779,
+LGB,PS-S3,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.05}",0.10607207192817023,
+LGB,PS-S3,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.1}",0.11201537422920363,
+LGB,PS-S3,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.05}",0.11103426385773764,
+LGB,PS-S3,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.1}",0.12589471417345796,
+LGB,PS-S3,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.05}",0.1121066641569781,
+LGB,PS-S3,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.1}",0.12864957501253732,
+LGB,PS-S3,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.05}",0.12779354368174767,
+LGB,PS-S3,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.1}",0.15687288305273872,
+LGB,PS-S3,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.05}",0.1285236653148544,
+LGB,PS-S3,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.1}",0.15677924545702968,
+LGB,PS-S4,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.05}",0.10482249000741797,
+LGB,PS-S4,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.1}",0.11094329986029064,
+LGB,PS-S4,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.05}",0.10415650066846054,
+LGB,PS-S4,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.1}",0.11093424655628745,
+LGB,PS-S4,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.05}",0.11112385361563337,
+LGB,PS-S4,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.1}",0.12441658131985733,
+LGB,PS-S4,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.05}",0.11063487083539658,
+LGB,PS-S4,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.1}",0.12536290504326192,
+LGB,PS-S4,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.05}",0.12418881449155743,
+LGB,PS-S4,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.1}",0.1473604841344313,
+LGB,PS-S4,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.05}",0.12436773460987385,
+LGB,PS-S4,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.1}",0.15270353766261965,
+LGB,PS-S5,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.05}",0.10785328404121544,
+LGB,PS-S5,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.1}",0.112260110217279,
+LGB,PS-S5,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.05}",0.10827439196944529,
+LGB,PS-S5,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.1}",0.1131199884077285,
+LGB,PS-S5,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.05}",0.11332278091152514,
+LGB,PS-S5,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.1}",0.12309567160988041,
+LGB,PS-S5,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.05}",0.11383733270777856,
+LGB,PS-S5,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.1}",0.12396888922945794,
+LGB,PS-S5,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.05}",0.12284324198566585,
+LGB,PS-S5,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.1}",0.14027126071387147,
+LGB,PS-S5,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.05}",0.12332457451947948,
+LGB,PS-S5,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.1}",0.14444203903787983,
+LGB,PS-S6,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.05}",0.10400699171834099,
+LGB,PS-S6,"{'num_leaves': 7, 'min_child_samples': 20, 'learning_rate': 0.1}",0.10997944685856349,
+LGB,PS-S6,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.05}",0.10437796659226846,
+LGB,PS-S6,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.1}",0.11118307149043564,
+LGB,PS-S6,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.05}",0.11083325388376979,
+LGB,PS-S6,"{'num_leaves': 15, 'min_child_samples': 20, 'learning_rate': 0.1}",0.12546685331658816,
+LGB,PS-S6,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.05}",0.11165397481200377,
+LGB,PS-S6,"{'num_leaves': 15, 'min_child_samples': 50, 'learning_rate': 0.1}",0.12586515351651992,
+LGB,PS-S6,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.05}",0.12453369269245433,
+LGB,PS-S6,"{'num_leaves': 31, 'min_child_samples': 20, 'learning_rate': 0.1}",0.15016784631856114,
+LGB,PS-S6,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.05}",0.12486310008409093,
+LGB,PS-S6,"{'num_leaves': 31, 'min_child_samples': 50, 'learning_rate': 0.1}",0.15241049804924997,
+LR,BASE,0.03,0.4930611109121588,5.7
+LR,BASE,0.1,0.48746188334664425,5.7
+LR,BASE,0.3,0.486347314947197,5.7
+LR,BASE,1.0,0.48632101800440347,5.7
+LR,AUG,0.03,0.4973603556038297,5.7
+LR,AUG,0.1,0.49479567837358496,5.7
+LR,AUG,0.3,0.4943007590303167,5.7
+LR,AUG,1.0,0.49468229940917335,5.7
+LR,PS-S0,0.03,0.4930611109121522,5.7
+LR,PS-S0,0.1,0.48746188334664825,5.7
+LR,PS-S0,0.3,0.4863473149471891,5.7
+LR,PS-S0,1.0,0.48632101800336736,5.7
+LR,PS-S1,0.03,0.5135988741842621,5.7
+LR,PS-S1,0.1,0.508533409271259,5.7
+LR,PS-S1,0.3,0.506979083009725,5.7
+LR,PS-S1,1.0,0.5064967201801147,5.7
+LR,PS-S2,0.03,0.4932932657324726,5.7
+LR,PS-S2,0.1,0.48738734708477377,5.7
+LR,PS-S2,0.3,0.4860227012661505,5.7
+LR,PS-S2,1.0,0.4860766127798189,5.7
+LR,PS-S3,0.03,0.4928912621462131,5.7
+LR,PS-S3,0.1,0.48720103868496284,5.7
+LR,PS-S3,0.3,0.48607276710118075,5.7
+LR,PS-S3,1.0,0.4861275123360925,5.7
+LR,PS-S4,0.03,0.49470715335600124,5.7
+LR,PS-S4,0.1,0.48909555660079906,5.7
+LR,PS-S4,0.3,0.487909926980181,5.7
+LR,PS-S4,1.0,0.48769542165421004,5.7
+LR,PS-S5,0.03,0.5146899725444292,5.7
+LR,PS-S5,0.1,0.5097093288308019,5.7
+LR,PS-S5,0.3,0.5083208255482452,5.7
+LR,PS-S5,1.0,0.5080060596548464,5.7
+LR,PS-S6,0.03,0.49456425700662965,5.7
+LR,PS-S6,0.1,0.4889558328542488,5.7
+LR,PS-S6,0.3,0.48771316791854563,5.7
+LR,PS-S6,1.0,0.48753173575701086,5.7

@@ -1,0 +1,23 @@
+{
+  "G1_integrity": {
+    "all_seqn_unique": true,
+    "label_weight_present": true,
+    "seqn_overlap_P_L": 0,
+    "pass": true
+  },
+  "G2_events_L": {
+    "events_6.5": 128,
+    "events_5.7": 1474,
+    "min": 100,
+    "pass": true,
+    "action_if_fail": null
+  },
+  "G3_harmonization": {
+    "core_B1_all_present_both": true,
+    "B2_vars_present_both": 6,
+    "B3_vars_present_both": 1,
+    "B4_vars_present_both": 5,
+    "pass": true,
+    "note": "Có mặt ≠ cùng định nghĩa: vẫn phải đọc codebook cho thể lực (D-19)"
+  }
+}

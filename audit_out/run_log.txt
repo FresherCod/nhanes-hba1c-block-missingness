@@ -1,0 +1,231 @@
+   cycle    name  status    bytes
+0      P  P_DEMO  cached  3614720
+1      P   P_GHB  cached   167600
+2      P   P_DIQ  cached  3361520
+3      P   P_BMX  cached  2520640
+4      P  P_BPXO  cached  1039840
+5      P   P_BPQ  cached   899520
+6      P   P_MCQ  cached  7562560
+7      P   P_SMQ  cached  1428560
+8      P   P_PAQ  cached  1321440
+9      P   P_RHQ  cached  1365600
+10     L  DEMO_L  cached  2582160
+11     L   GHB_L  cached   174000
+12     L   DIQ_L  cached   847600
+13     L   BMX_L  cached  1563200
+14     L  BPXO_L  cached   696720
+15     L   BPQ_L  cached   409680
+16     L   MCQ_L  cached  3294000
+17     L   SMQ_L  cached   651120
+18     L   PAQ_L  cached   409520
+19     L   RHQ_L  cached   410000
+   cycle    file   rows  seqn_unique  n_cols
+0      P  P_DEMO  15560         True      29
+1      P   P_GHB  10409         True       2
+2      P   P_DIQ  14986         True      28
+3      P   P_BMX  14300         True      22
+4      P  P_BPXO  11656         True      12
+5      P   P_BPQ  10195         True      11
+6      P   P_MCQ  14986         True      63
+7      P   P_SMQ  11137         True      16
+8      P   P_PAQ   9693         True      17
+9      P   P_RHQ   5314         True      32
+10     L  DEMO_L  11933         True      27
+11     L   GHB_L   7199         True       3
+12     L   DIQ_L  11744         True       9
+13     L   BMX_L   8860         True      22
+14     L  BPXO_L   7801         True      12
+15     L   BPQ_L   8501         True       6
+16     L   MCQ_L  11744         True      35
+17     L   SMQ_L   9015         True       9
+18     L   PAQ_L   8153         True       8
+19     L   RHQ_L   3917         True      13
+SEQN chung giữa P và L: 0
+   cycle       var  code    n
+1      P    BPQ020     9   12
+2      P   MCQ300C     7    2
+3      P   MCQ300C     9  131
+4      P    RHQ162     7    1
+5      P    RHQ162     9    1
+6      P    SMQ020     7    2
+7      P    SMQ020     9    3
+13     P    PAQ665     9    2
+14     P  DMDEDUC2     7    2
+15     P  DMDEDUC2     9   13
+17     P    DIQ050     9    1
+19     P    DIQ070     9    5
+20     P    PAD680  7777    6
+21     P    PAD680  9999   60
+0      L    BPQ020     7    1
+1      L    BPQ020     9   10
+2      L    SMQ020     7    7
+3      L    SMQ020     9    7
+7      L  DMDEDUC2     9   11
+11     L    DIQ070     9    7
+12     L    PAD680  7777    6
+13     L    PAD680  9999   67
+14     L   PAD790Q  7777   10
+15     L   PAD790Q  9999   39
+16     L   PAD810Q  7777    4
+17     L   PAD810Q  9999   36
+P DIQ050
+DIQ050  -1.0   1.0   2.0   9.0
+DIQ010                        
+1.0        0   413  1006     1
+2.0     7545     0     0     0
+3.0      262     0     0     0
+9.0        5     0     0     0 
+
+P DIQ070
+DIQ070  -1.0   1.0   2.0   9.0
+DIQ010                        
+1.0        0  1016   401     3
+2.0     6633    52   859     1
+3.0        0    56   205     1
+9.0        3     0     2     0 
+
+L DIQ050
+DIQ050  -1.0   1.0   2.0
+DIQ010                  
+-1.0       2     0     0
+ 1.0       0   339   731
+ 2.0    6466     0     0
+ 3.0     270     0     0
+ 9.0       1     0     0 
+
+L DIQ070
+DIQ070  -1.0   1.0   2.0   9.0
+DIQ010                        
+-1.0       2     0     0     0
+ 1.0       0   764   302     4
+ 2.0    5589    56   820     1
+ 3.0       0    58   210     2
+ 9.0       1     0     0     0 
+
+  cycle                       step      n         sum_w
+0     P                 C1 in DEMO  15560  3.223242e+08
+1     P                 C2 age>=20   9232  2.404495e+08
+2     P            C3 MEC examined   8544  2.404495e+08
+3     P               C4 has LBXGH   8081  2.302295e+08
+4     P          C5 label weight>0   8081  2.302295e+08
+5     P            C6 not pregnant   8005  2.281110e+08
+6     P  C7 not diagnosed (DIQ010)   6743  2.009521e+08
+7     P       C8 no diabetes pills   6644  1.988237e+08
+0     L                 C1 in DEMO  11933  2.799926e+08
+1     L                 C2 age>=20   7809  2.450612e+08
+2     L            C3 MEC examined   6064  2.450612e+08
+3     L               C4 has LBXGH   5767  2.441262e+08
+4     L          C5 label weight>0   5767  2.441262e+08
+5     L            C6 not pregnant   5730  2.420149e+08
+6     L  C7 not diagnosed (DIQ010)   4911  2.135614e+08
+7     L       C8 no diabetes pills   4826  2.109442e+08
+P n nếu loại DIQ010=3: 6458 | chính: 6644
+L n nếu loại DIQ010=3: 4657 | chính: 4826
+  cycle  threshold     n  events  prev_unweighted  prev_weighted
+0     P       6.50  6644     237         0.035671       0.024054
+1     P       5.70  6644    2345         0.352950       0.270751
+2     P       6.35  6644     306         0.046057       0.030722
+3     P       6.65  6644     159         0.023931       0.015328
+0     L       6.50  4826     128         0.026523       0.022857
+1     L       5.70  4826    1474         0.305429       0.266960
+2     L       6.35  4826     172         0.035640       0.030420
+3     L       6.65  4826      78         0.016162       0.014491
+   cycle     group    level     n  events  prev_weighted
+0      L    AGEGRP    20-44  1773      23       0.011662
+1      L    AGEGRP    45-64  1600      49       0.029875
+2      L    AGEGRP      65+  1453      56       0.039157
+3      L  RIAGENDR      1.0  2147      67       0.026322
+4      L  RIAGENDR      2.0  2679      61       0.019579
+5      L  RIDRETH3      1.0   316      19       0.051854
+6      L  RIDRETH3      2.0   482       9       0.014546
+7      L  RIDRETH3      3.0  2938      64       0.018286
+8      L  RIDRETH3      4.0   529      26       0.044147
+9      L  RIDRETH3      6.0   269       7       0.026280
+10     L  RIDRETH3      7.0   292       3       0.008293
+11     L    PIRGRP     <1.3   871      23       0.024133
+12     L    PIRGRP  1.3-3.5  1539      64       0.036359
+13     L    PIRGRP     >3.5  1802      27       0.011495
+14     L    PIRGRP      nan   614      14       0.021563
+P số người có LBXGH trong [6.2, 6.8]: 430
+{6.2: 136, 6.3: 95, 6.4: 69, 6.5: 33, 6.6: 45, 6.7: 25, 6.8: 27}
+L số người có LBXGH trong [6.2, 6.8]: 256
+{6.2: 80, 6.3: 59, 6.4: 44, 6.5: 27, 6.6: 23, 6.7: 13, 6.8: 10}
+                                   0                 1
+cycle                              P                 L
+weight_var                  WTMECPRP           WTPH2YR
+weight_in_file                  True              True
+n_zero_weight_full              1260               449
+sum_w_full          322324171.992904       279992596.0
+sum_w_cohort        198823720.826791  210944160.782808
+cv_w_cohort                  1.12618          0.732744
+max_over_median_w          20.111489          6.992035
+n_strata                          24                15
+psu_per_stratum               [2, 3]               [2]
+n_strata_in_cohort                24                15
+               pct_missing            present       
+cycle                    L          P       L      P
+block var                                           
+B1    BMXBMI      1.222545   1.414810    True   True
+      BMXHT       0.911728   1.339554    True   True
+      BMXWAIST    3.978450   4.139073    True   True
+      BMXWT       1.036055   1.173992    True   True
+B2    BPXODI1     3.211770   9.602649    True   True
+      BPXODI2     3.336096   9.708007    True   True
+      BPXODI3     3.543307   9.858519    True   True
+      BPXOSY1     3.211770   9.602649    True   True
+      BPXOSY2     3.336096   9.708007    True   True
+      BPXOSY3     3.543307   9.858519    True   True
+B3    BPQ020      0.062163   0.090307    True   True
+      MCQ300C          NaN   1.294401   False   True
+      RHQ162           NaN  59.858519   False   True
+B4    DMDEDUC2    0.041442   0.135461    True   True
+      INDFMPIR   12.722752  13.726671    True   True
+      PAD680      0.704517   0.737508    True   True
+      PAD790Q     0.538748        NaN    True  False
+      PAD810Q     0.476585        NaN    True  False
+      PAQ650           NaN   0.000000   False   True
+      PAQ665           NaN   0.030102   False   True
+      SMQ020      0.124327   0.030102    True   True
+      SMQ040     60.443431  59.196267    True   True
+core  RIAGENDR    0.000000   0.000000    True   True
+      RIDAGEYR    0.000000   0.000000    True   True
+      RIDRETH3    0.000000   0.000000    True   True
+  cycle missing_blocks     n
+0     P           none  5969
+1     P             B2   584
+2     P          B1+B2    54
+3     P             B1    37
+0     L           none  4640
+1     L             B2   130
+2     L             B1    28
+3     L          B1+B2    25
+4     L             B3     3
+P PAQ650 {'count': 6644.0, 'mean': 1.74, 'std': 0.44, 'min': 1.0, '25%': 1.0, '50%': 2.0, '75%': 2.0, 'max': 2.0}
+P PAQ665 {'count': 6642.0, 'mean': 1.57, 'std': 0.49, 'min': 1.0, '25%': 1.0, '50%': 2.0, '75%': 2.0, 'max': 2.0}
+L PAD790Q {'count': 4800.0, 'mean': 2.76, 'std': 2.89, 'min': 0.0, '25%': 1.0, '50%': 2.0, '75%': 4.0, 'max': 104.0}
+L PAD810Q {'count': 4803.0, 'mean': 1.24, 'std': 2.51, 'min': 0.0, '25%': 0.0, '50%': 0.0, '75%': 2.0, 'max': 90.0}
+        var    mean_w_P    mean_w_L
+0  RIDAGEYR   46.877521   47.323772
+1    BMXBMI   29.311320   29.156374
+2      WHTR    0.591239    0.588994
+3  BMXWAIST   99.151326   98.925247
+4  SBP_MEAN  121.180960  120.393491
+5    PAD680  351.065693  362.041886
+6  INDFMPIR    3.166629    3.092219
+7  LTPA_ANY    0.571052    0.843295
+                                                                                           0
+G1_integrity.all_seqn_unique                                                            True
+G1_integrity.label_weight_present                                                       True
+G1_integrity.seqn_overlap_P_L                                                              0
+G1_integrity.pass                                                                       True
+G2_events_L.events_6.5                                                                   128
+G2_events_L.events_5.7                                                                  1474
+G2_events_L.min                                                                          100
+G2_events_L.pass                                                                        True
+G2_events_L.action_if_fail                                                              None
+G3_harmonization.core_B1_all_present_both                                               True
+G3_harmonization.B2_vars_present_both                                                      6
+G3_harmonization.B3_vars_present_both                                                      1
+G3_harmonization.B4_vars_present_both                                                      5
+G3_harmonization.pass                                                                   True
+G3_harmonization.note                      Có mặt ≠ cùng định nghĩa: vẫn phải đọc codeboo...

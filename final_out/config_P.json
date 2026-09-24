@@ -1,0 +1,114 @@
+{
+  "config": {
+    "LR": {
+      "BASE": 0.3,
+      "AUG": 0.3,
+      "PS": {
+        "S0": 0.3,
+        "S1": 1.0,
+        "S2": 1.0,
+        "S3": 1.0,
+        "S4": 1.0,
+        "S5": 1.0,
+        "S6": 1.0
+      }
+    },
+    "LGB": {
+      "BASE": {
+        "num_leaves": 7,
+        "min_child_samples": 20,
+        "learning_rate": 0.05
+      },
+      "AUG": {
+        "num_leaves": 7,
+        "min_child_samples": 50,
+        "learning_rate": 0.05
+      },
+      "PS": {
+        "S0": {
+          "num_leaves": 7,
+          "min_child_samples": 20,
+          "learning_rate": 0.05
+        },
+        "S1": {
+          "num_leaves": 7,
+          "min_child_samples": 50,
+          "learning_rate": 0.05
+        },
+        "S2": {
+          "num_leaves": 7,
+          "min_child_samples": 50,
+          "learning_rate": 0.05
+        },
+        "S3": {
+          "num_leaves": 7,
+          "min_child_samples": 20,
+          "learning_rate": 0.05
+        },
+        "S4": {
+          "num_leaves": 7,
+          "min_child_samples": 50,
+          "learning_rate": 0.05
+        },
+        "S5": {
+          "num_leaves": 7,
+          "min_child_samples": 20,
+          "learning_rate": 0.05
+        },
+        "S6": {
+          "num_leaves": 7,
+          "min_child_samples": 20,
+          "learning_rate": 0.05
+        }
+      }
+    },
+    "LR57": {
+      "BASE": 1.0,
+      "AUG": 0.3,
+      "PS": {
+        "S0": 1.0,
+        "S1": 1.0,
+        "S2": 0.3,
+        "S3": 0.3,
+        "S4": 1.0,
+        "S5": 1.0,
+        "S6": 1.0
+      }
+    }
+  },
+  "thresholds": {
+    "LR-BASE": 0.02683439196424082,
+    "LR-AUG": 0.02638012085381391,
+    "LR-PS": 0.026834391969606193,
+    "LGB-BASE": 0.015444193748202826,
+    "LGB-AUG": 0.01692604427155171,
+    "LGB-PS": 0.015444193748202826,
+    "BANG": 5
+  },
+  "recal": {
+    "LR-BASE": [
+      0.3790690493695911,
+      1.1450465090325757
+    ],
+    "LR-AUG": [
+      0.17405622579996066,
+      1.0724527967784567
+    ],
+    "LR-PS": [
+      0.3790690495024981,
+      1.1450465090910764
+    ],
+    "LGB-BASE": [
+      -0.8954085572968327,
+      0.7024856234157015
+    ],
+    "LGB-AUG": [
+      -0.849473591626342,
+      0.7169289772770153
+    ],
+    "LGB-PS": [
+      -0.8954085572968327,
+      0.7024856234157015
+    ]
+  }
+}

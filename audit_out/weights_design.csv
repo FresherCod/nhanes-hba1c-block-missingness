@@ -1,0 +1,3 @@
+cycle,weight_var,weight_in_file,n_zero_weight_full,sum_w_full,sum_w_cohort,cv_w_cohort,max_over_median_w,n_strata,psu_per_stratum,n_strata_in_cohort
+P,WTMECPRP,True,1260,322324171.992904,198823720.826791,1.126179811663837,20.11148949242413,24,"[2, 3]",24
+L,WTPH2YR,True,449,279992596.0,210944160.78280807,0.7327438114571659,6.992035079739883,15,[2],15

@@ -1,0 +1,16 @@
+{
+  "K2": "OK",
+  "K3": "OK (assert trong run_cv)",
+  "K9": "OK (assert trong X_of)",
+  "K10": "OK",
+  "K6_perm_auc": 0.4796138716949223,
+  "K6_pass": true,
+  "K7_max_single_auc": 0.7123461921455359,
+  "K7_pass": true,
+  "dev_delta_P_OOF": {
+    "delta_AUG_minus_PS_meanS1S5": -0.0001681185512059695,
+    "delta_AUG_minus_BASE_meanS1S5": -0.0007133615000416267,
+    "delta_AUG_minus_PS_S0": -0.0002944215867991262
+  },
+  "note": "Chỉ P, 1 seed, tham số cố định; không phải kết quả nghiên cứu"
+}

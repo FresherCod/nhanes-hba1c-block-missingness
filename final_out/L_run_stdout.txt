@@ -1,0 +1,21 @@
+L: 4826 sự kiện: 128 | strata: 15
+Đã lưu dự đoán (13s)
+CHÍNH: {'delta_mean_S1_S5': -0.0006, 'delta_S0': 0.0004, 'delta_S1': 0.0003, 'delta_S2': 0.0012, 'delta_S3': -0.0003, 'delta_S4': -0.0029, 'delta_S5': -0.0012} tương đương thực tế (CI trong ±δ) | S0 không kém: True
+Bảng chính xong (39s)
+PHỤ:
+  LR AUG−BASE (S1–S5) {'est': 0.0088, 'lo': np.float64(0.0056), 'hi': np.float64(0.0119)}
+  LR PS−BASE (S1–S5) {'est': 0.0093, 'lo': np.float64(0.0061), 'hi': np.float64(0.0126)}
+  LR BASE mất skill khi thiếu (S0 − S1…S5) {'est': 0.0183, 'lo': np.float64(0.0106), 'hi': np.float64(0.026)}
+  LR AUG−PS tại S6 (không dùng khi huấn luyện AUG) {'est': -0.0013, 'lo': np.float64(-0.0056), 'hi': np.float64(0.003)}
+  LR AUG−PS tại S7 (MAR) {'est': -0.0008, 'lo': np.float64(-0.0027), 'hi': np.float64(0.0012)}
+  LGB AUG−PS (S1–S5) {'est': 0.0124, 'lo': np.float64(0.0075), 'hi': np.float64(0.0174)}
+  LRw AUG−PS (S1–S5), huấn luyện có trọng số {'est': 0.0002, 'lo': np.float64(-0.0033), 'hi': np.float64(0.0036)}
+  LR-AUG − LGB-AUG (S1–S5) {'est': 0.0062, 'lo': np.float64(-0.0034), 'hi': np.float64(0.0157)}
+  LR AUG−PS (S1–S5), nhãn ≥6.4 {'est': -0.0003, 'lo': np.float64(-0.0019), 'hi': np.float64(0.0012)}
+  sự kiện nhãn ≥6.4 {'est': 172}
+  LR AUG−PS (S1–S5), nhãn ≥6.7 {'est': 0.0013, 'lo': np.float64(-0.0012), 'hi': np.float64(0.0038)}
+  sự kiện nhãn ≥6.7 {'est': 78}
+  LR AUG−PS (S1–S5), loại borderline {'est': -0.0006, 'lo': np.float64(-0.0024), 'hi': np.float64(0.0011)}
+  LR57 AUG−PS (S1–S5), nhãn ≥5,7 {'est': -0.0015, 'lo': np.float64(-0.0032), 'hi': np.float64(0.0001)}
+BANG: {'auc': 0.751, 'sens': np.float64(0.691), 'spec': np.float64(0.66), 'ppv': np.float64(0.045), 'referral': np.float64(0.348)}
+Hoàn tất (91s)
