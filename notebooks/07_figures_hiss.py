@@ -13,15 +13,15 @@ FIG = ROOT / "manuscript" / "figures"
 FIG.mkdir(exist_ok=True)
 C = {"AUG": "#2a78d6", "PS": "#eb6834", "BASE": "#1baf7a"}   # đã kiểm bằng validate_palette.js
 MK = {"AUG": "o", "PS": "s", "BASE": "^"}
-LAB = {"AUG": "Block-masking augmentation (M-AUG)", "PS": "Pattern submodels (M-PS)", "BASE": "No missing-data handling (M-BASE)"}
+LAB = {"AUG": "Block-masking augmentation (M-AUG)", "PS": "Pattern submodels (M-PS)", "BASE": "No block-missingness training (M-BASE)"}
 INK, INK2, GRID, SURF = "#0b0b0b", "#52514e", "#e6e5e1", "#fcfcfb"
-plt.rcParams.update({"font.family": "Arial", "font.size": 9, "axes.edgecolor": INK2,
+plt.rcParams.update({"font.family": "Arial", "font.size": 10.5, "axes.edgecolor": INK2,
                      "axes.labelcolor": INK, "xtick.color": INK2, "ytick.color": INK2,
                      "axes.spines.top": False, "axes.spines.right": False,
                      "figure.facecolor": SURF, "axes.facecolor": SURF, "savefig.facecolor": SURF})
 SC_LAB = {"S0": "S0 complete data", "S1": "S1 anthropometry missing", "S2": "S2 blood pressure missing",
           "S3": "S3 medical history missing", "S4": "S4 lifestyle/SES missing", "S5": "S5 anthropometry + BP missing",
-          "S6": "S6 history + lifestyle missing*", "S7": "S7 lifestyle missing (MAR)*"}
+          "S6": "S6 history + lifestyle missing*", "S7": "S7 lifestyle missing, education-dependent*"}
 
 
 NAMES = {"fig1_skill_by_scenario": "Fig2", "fig2_forest_primary": "Fig1",
@@ -79,9 +79,15 @@ save(fig, "fig2_forest_primary")
 
 # ---- Hình 3 (HẬU KIỂM): thiếu một phần nhân trắc
 ph = json.loads((ROOT / "posthoc_out" / "posthoc_results.json").read_text(encoding="utf-8"))["PH1b"]
-items = [("Measured weight, height and waist", "S0_full"), ("No tape measure (measured weight + height)", "A1_no_tape"),
-         ("Self-reported weight and height only", "A2_self_report"), ("No anthropometry", "S1_no_anthro")]
-fig, axs = plt.subplots(1, 2, figsize=(7.4, 2.6), sharey=True)
+ph2 = json.loads((ROOT / "posthoc_out" / "posthoc_review_results.json").read_text(encoding="utf-8"))["R3_questionnaire_only"]
+ph = dict(ph)
+ph["skill_Q_SR"], ph["auc_Q_SR"] = ph2["skill_questionnaire_selfreport"], ph2["auc_questionnaire_selfreport"]
+items = [("Measured weight, height, waist + measured BP", "S0_full"),
+         ("Measured weight and height + measured BP", "A1_no_tape"),
+         ("Self-reported weight and height + measured BP", "A2_self_report"),
+         ("Questionnaire only: self-reported weight/height, no BP", "Q_SR"),
+         ("No anthropometry (measured BP retained)", "S1_no_anthro")]
+fig, axs = plt.subplots(1, 2, figsize=(8.6, 3.2), sharey=True)
 for ax, met, xl in [(axs[0], "skill", "Brier skill"), (axs[1], "auc", "AUROC")]:
     for k, (lab, key) in enumerate(items):
         v = ph[f"{met}_{key}"]
@@ -92,7 +98,7 @@ for ax, met, xl in [(axs[0], "skill", "Brier skill"), (axs[1], "auc", "AUROC")]:
     ax.set_xlabel(xl + " (95% CI, JK2)")
 axs[0].set_yticks(range(len(items)), [x[0] for x in items])
 axs[0].invert_yaxis()
-axs[0].set_xlim(right=0.068); axs[1].set_xlim(right=0.885)
+axs[0].set_xlim(right=0.072); axs[1].set_xlim(right=0.895)
 for a, lab in zip(axs, "ab"):
     a.text(0.0, 1.06, lab, transform=a.transAxes, fontweight="bold", fontsize=10, color=INK)
 save(fig, "fig3_posthoc_anthropometry")
