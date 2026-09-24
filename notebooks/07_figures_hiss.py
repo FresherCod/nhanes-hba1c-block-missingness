@@ -24,7 +24,7 @@ SC_LAB = {"S0": "S0 complete data", "S1": "S1 anthropometry missing", "S2": "S2 
           "S6": "S6 history + lifestyle missing*", "S7": "S7 lifestyle missing (MAR)*"}
 
 
-NAMES = {"fig1_skill_by_scenario": "Fig1", "fig2_forest_primary": "Fig2",
+NAMES = {"fig1_skill_by_scenario": "Fig2", "fig2_forest_primary": "Fig1",
          "fig3_posthoc_anthropometry": "Fig3", "fig4_posthoc_dca_57": "Fig4"}
 
 
