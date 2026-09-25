@@ -131,29 +131,6 @@ for r in [("Age <40 / 40–49 / 50–59 / ≥60 years", "0 / 1 / 2 / 3", "RIDAGE
     w("| " + " | ".join(r) + " |")
 w("\nMissing inputs were scored as 0 for the corresponding item, following the instruction of the score for unknown answers: in 2021–2023, 48 participants lacked both BMI and waist circumference (obesity item 0) and 104 lacked measured blood pressure and did not report hypertension (hypertension item 0).\n")
 
-# S8 missingness indicators and pattern-submodel definition (clarifications requested by peer review)
-w("## Section S3 Missingness indicators, pattern-submodel training, and scenario routing\n")
-w('"Pattern submodels" (M-PS) here denotes a reduced-feature variant: for each scenario S0–S6, a submodel was '
-  "fitted on the same full development sample used for M-AUG and M-BASE, with the columns of the blocks removed "
-  "from the design matrix (`X_drop` in `src/final_pipeline.py`). This differs from the original pattern-submodel "
-  "method of Mercaldo and Blume, which restricts training to the records that naturally exhibit each pattern and "
-  "thereby obtains a guarantee under data not missing at random; the variant used here was compared empirically "
-  "rather than assumed to carry that guarantee.\n\n"
-  "The four block-level missingness indicators (MISS_B1–MISS_B4) used by M-AUG and M-BASE are set to 1 only for "
-  "blocks that a scenario actively sets to missing (`X_mask` in `src/final_pipeline.py`); a participant who is "
-  "naturally missing all variables in a retained block keeps indicator 0 for that block; that block's own missing "
-  "values are handled by the per-variable median imputation and missing-value indicators inside the logistic-"
-  "regression pipeline, not by the block-level indicator. This is a modelling choice, not an error: it lets the "
-  "block indicators represent the deployment scenario being simulated rather than the union of simulated and "
-  "naturally occurring missingness.\n\n"
-  "In scenario S7 (Section 2.5), each of the 4,826 validation participants was independently assigned, with "
-  "probability 0.5 (education ≤ high school) or 0.1 (otherwise), to have the lifestyle/socioeconomic block (B4) "
-  "masked; 1,082 participants were masked in the realised draw (`03b_evaluate_L.py`). For M-AUG, every "
-  "participant's prediction came from the same five-seed predictor, applied with B4 masked or intact according to "
-  "that draw (`AugEnsemble.predict` with `row_mask`). For M-PS, each participant's prediction came from the S4 "
-  "submodel if B4 was masked for them and from the S0 submodel otherwise (`PatternSub.predict` with `row_mask`); "
-  "there is no single combined \"S7 model\", only this per-participant routing.\n")
-
 # S6 seeds
 w("## Table S6 Individual augmentation seeds (NHANES 2021–2023, post hoc)\n")
 w("| Seed | Brier skill at S0 (95% CI) | Difference from M-PS, mean S1–S5 (95% CI) |\n|---|---|---|")
@@ -195,6 +172,30 @@ w(f"The lock file (LOCK_protocol_v0.4.json) was created on {lock['created']} (lo
 w("| Locked file | SHA-256 (full) |\n|---|---|")
 for f, h in lock["files"].items():
     w(f"| {f} | `{h}` |")
+
+# S8 missingness indicators and pattern-submodel definition (clarifications requested by peer review)
+w("## Section S3 Missingness indicators, pattern-submodel training, and scenario routing\n")
+w('"Pattern submodels" (M-PS) here denotes a reduced-feature variant: for each scenario S0–S6, a submodel was '
+  "fitted on the same full development sample used for M-AUG and M-BASE, with the columns of the blocks removed "
+  "from the design matrix (`X_drop` in `src/final_pipeline.py`). This differs from the original pattern-submodel "
+  "method of Mercaldo and Blume, which restricts training to the records that naturally exhibit each pattern and "
+  "thereby obtains a guarantee under data not missing at random; the variant used here was compared empirically "
+  "rather than assumed to carry that guarantee.\n\n"
+  "The four block-level missingness indicators (MISS_B1–MISS_B4) used by M-AUG and M-BASE are set to 1 only for "
+  "blocks that a scenario actively sets to missing (`X_mask` in `src/final_pipeline.py`); a participant who is "
+  "naturally missing all variables in a retained block keeps indicator 0 for that block; that block's own missing "
+  "values are handled by the per-variable median imputation and missing-value indicators inside the logistic-"
+  "regression pipeline, not by the block-level indicator; the block indicators encode the simulated scenario, "
+  "not the union of simulated and naturally occurring missingness. The performance results in this article "
+  "apply to this scenario-coding rule; they do not establish that the same handling would perform similarly "
+  "under other rules for combining simulated and naturally occurring missingness.\n\n"
+  "In scenario S7 (Section 2.5), each of the 4,826 validation participants was independently assigned, with "
+  "probability 0.5 (education ≤ high school) or 0.1 (otherwise), to have the lifestyle/socioeconomic block (B4) "
+  "masked; 1,082 participants were masked in the realised draw (`03b_evaluate_L.py`). For M-AUG, every "
+  "participant's prediction came from the same five-seed predictor, applied with B4 masked or intact according to "
+  "that draw (`AugEnsemble.predict` with `row_mask`). For M-PS, each participant's prediction came from the S4 "
+  "submodel if B4 was masked for them and from the S0 submodel otherwise (`PatternSub.predict` with `row_mask`); "
+  "there is no single combined \"S7 model\", only this per-participant routing.\n")
 
 OUT.write_text("\n".join(L) + "\n", encoding="utf-8")
 print("written", OUT)
