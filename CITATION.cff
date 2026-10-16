@@ -5,6 +5,7 @@ authors:
   - family-names: "Truong"
     given-names: "Phuc Dinh"
     orcid: "https://orcid.org/0009-0008-2149-478X"
+doi: "10.5281/zenodo.23413197"
 repository-code: "https://github.com/FresherCod/nhanes-hba1c-block-missingness"
 license: MIT
 version: "1.0"

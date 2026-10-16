@@ -4,7 +4,7 @@ Code, locked protocol and results for the study:
 
 > *Block-masking augmentation versus reduced-feature pattern submodels for missing blocks of non-laboratory inputs in a machine-learning screening tool for elevated HbA1c: a protocol-locked temporal validation in NHANES* (manuscript in preparation for submission; this repository was first described under the working title "One model or many? ...").
 
-Author: Phuc Dinh Truong (ORCID [0009-0008-2149-478X](https://orcid.org/0009-0008-2149-478X)), independent researcher, Khanh Hoa, Viet Nam. Archived copy (Zenodo DOI): to be added after deposit.
+Author: Phuc Dinh Truong (ORCID [0009-0008-2149-478X](https://orcid.org/0009-0008-2149-478X)), independent researcher, Khanh Hoa, Viet Nam. Archived copy of version 1.0 on Zenodo: [10.5281/zenodo.23413197](https://doi.org/10.5281/zenodo.23413197) (all versions: [10.5281/zenodo.23413196](https://doi.org/10.5281/zenodo.23413196)).
 
 - **Development:** NHANES 2017–March 2020.
 - **Temporal validation:** NHANES August 2021–August 2023.
