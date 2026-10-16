@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite them as below."
+title: "Code, locked protocol and results: block-masking augmentation versus reduced-feature pattern submodels for missing blocks of non-laboratory inputs in a machine-learning screening tool for elevated HbA1c (NHANES)"
+authors:
+  - family-names: "Truong"
+    given-names: "Phuc Dinh"
+    orcid: "https://orcid.org/0009-0008-2149-478X"
+repository-code: "https://github.com/FresherCod/nhanes-hba1c-block-missingness"
+license: MIT
+version: "1.0"
+date-released: "2026-10-16"
+keywords:
+  - missing data
+  - clinical prediction model
+  - diabetes screening
+  - NHANES
+  - protocol-locked validation

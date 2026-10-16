@@ -2,12 +2,14 @@
 
 Code, locked protocol and results for the study:
 
-> *One model or many? Handling missing blocks of non-laboratory information in a machine-learning screening tool for elevated HbA1c: a protocol-locked temporal validation in NHANES* (manuscript in preparation).
+> *Block-masking augmentation versus reduced-feature pattern submodels for missing blocks of non-laboratory inputs in a machine-learning screening tool for elevated HbA1c: a protocol-locked temporal validation in NHANES* (manuscript in preparation for submission; this repository was first described under the working title "One model or many? ...").
+
+Author: Phuc Dinh Truong (ORCID [0009-0008-2149-478X](https://orcid.org/0009-0008-2149-478X)), independent researcher, Khanh Hoa, Viet Nam. Archived copy (Zenodo DOI): to be added after deposit.
 
 - **Development:** NHANES 2017–March 2020.
 - **Temporal validation:** NHANES August 2021–August 2023.
 - **Outcome:** HbA1c ≥6.5% in adults without diagnosed diabetes.
-- **Primary comparison:** block-masking augmentation (one model) vs pattern submodels (one model per missingness pattern).
+- **Primary comparison:** block-masking augmentation (M-AUG, one model) vs reduced-feature pattern submodels (M-PS, one model per missingness pattern), with a model not trained for block missingness (M-BASE) as reference.
 - **Primary measure:** survey-weighted Brier skill, with design-based (JK2) confidence intervals.
 
 ## Study integrity
@@ -40,7 +42,10 @@ The `.gitattributes` file (`* -text`) keeps file bytes identical across operatin
 | `notebooks/04_make_lock.py` | Creates the lock file |
 | `notebooks/03b_evaluate_L.py` | Stage B: single evaluation on validation data (refuses to run without a valid lock or if predictions already exist; `DRYRUN=1` tests on development data) |
 | `notebooks/05_posthoc.py` | Post hoc analyses (labelled as such) |
-| `notebooks/06_figures*.py`, `07_figures_hiss.py` | Figures |
+| `notebooks/08_posthoc_review.py` | Post hoc round 2 (seed spread, paired AUROC against the Bang score, questionnaire-only submodel, per-scenario equivalence) |
+| `notebooks/10a_posthoc_label57_by_scenario.py`, `10b_posthoc_all_patterns.py` | Post hoc round 3: outcome HbA1c ≥5.7% by scenario; all 15 block-missing patterns (reduced-feature submodels for 16 patterns; augmentation over 15 patterns). Plan: `addendum_posthoc_round3_20261014.md` |
+| `notebooks/10c_posthoc_C_grid_extension.py` | Post hoc round 4: extension of the regularization grid in the development data only. Plan and results: `addendum_posthoc_round4_20261014.md` |
+| `notebooks/06_figures*.py`, `07_figures_hiss.py` | Figures (`07_figures_hiss.py` writes `manuscript/figures/`, which is not in this repository) |
 | `audit_out/`, `dev_out/`, `final_out/`, `posthoc_out/` | Numerical outputs |
 | `RESULTS_protocol_v0.4.md`, `POSTHOC_REPORT.md` | Result reports |
 | `integration_A4.md`, `literature_extraction.md`, `search_log.md` | Evidence integration and literature search log |
@@ -53,6 +58,10 @@ python notebooks/01_data_audit.py      # downloads about 20 public .xpt files in
 python notebooks/03a_train_P.py        # stage A (development data only)
 python notebooks/03b_evaluate_L.py     # stage B: needs the lock; refuses to overwrite existing predictions
 python notebooks/05_posthoc.py         # post hoc (also downloads P_WHQ / WHQ_L)
+python notebooks/08_posthoc_review.py  # post hoc round 2
+python notebooks/10a_posthoc_label57_by_scenario.py   # post hoc round 3A
+python notebooks/10b_posthoc_all_patterns.py          # post hoc round 3B (a few minutes)
+python notebooks/10c_posthoc_C_grid_extension.py      # post hoc round 4 (development data only)
 ```
 
 Run all scripts from the repository root.
@@ -69,4 +78,8 @@ Claude (Anthropic) assisted with literature searching, protocol drafting, code w
 
 ## License
 
-Not yet specified (private repository).
+Code (`src/`, `notebooks/`): MIT licence (see `LICENSE`). Result files and documentation (`*_out/`, `*.md`): CC BY 4.0. NHANES data are not redistributed and remain subject to the National Center for Health Statistics terms.
+
+## How to cite
+
+See `CITATION.cff`. The study is reported in the manuscript named at the top of this file; once it is published, please cite the article.

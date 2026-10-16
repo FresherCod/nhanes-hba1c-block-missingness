@@ -1,0 +1,25 @@
+{
+  "gate_max_abs_diff": 9.71445146547012e-17,
+  "grid_locked": [
+    0.03,
+    0.1,
+    0.3,
+    1.0
+  ],
+  "grid_extended": [
+    0.03,
+    0.1,
+    0.3,
+    1.0,
+    3.0,
+    10.0,
+    30.0,
+    100.0
+  ],
+  "n_models": 9,
+  "n_at_locked_edge": 6,
+  "n_choice_changes": 1,
+  "n_at_extended_edge": 0,
+  "max_gain_extended_vs_locked": 1.9226305830163937e-05,
+  "seconds": 145
+}

@@ -13,7 +13,7 @@ FIG = ROOT / "figures_en"
 FIG.mkdir(exist_ok=True)
 C = {"AUG": "#2a78d6", "PS": "#eb6834", "BASE": "#1baf7a"}   # đã kiểm bằng validate_palette.js
 MK = {"AUG": "o", "PS": "s", "BASE": "^"}
-LAB = {"AUG": "Block-masking augmentation (M-AUG)", "PS": "Pattern submodels (M-PS)", "BASE": "No missing-data handling (M-BASE)"}
+LAB = {"AUG": "Block-masking augmentation (M-AUG)", "PS": "Reduced-feature pattern submodels (M-PS)", "BASE": "No missing-data handling (M-BASE)"}
 INK, INK2, GRID, SURF = "#0b0b0b", "#52514e", "#e6e5e1", "#fcfcfb"
 plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 9, "axes.edgecolor": INK2,
                      "axes.labelcolor": INK, "xtick.color": INK2, "ytick.color": INK2,
@@ -59,21 +59,21 @@ rows += [(SC_LAB["S6"], r["secondary"]["LR AUG−PS tại S6 (không dùng khi h
          ("Mean S1–S5 (primary estimand)", r["primary"]["delta_mean_S1_S5"])]
 fig, ax = plt.subplots(figsize=(7.2, 3.4))
 ax.axvspan(-0.005, 0.005, color="#efeeea", zorder=0)
-ax.text(0.0048, len(rows) - 0.5, "equivalence region ±δ", ha="right", va="center", fontsize=7.5, color=INK2)
+ax.text(0.0048, len(rows) - 0.5, "equivalence\nregion ±δ", ha="right", ma="right", va="center", fontsize=7.5, color=INK2, linespacing=1.1)  # two lines, right of the 0.000 line (reviewer note 2026-10-16)
 for k, (lab, v) in enumerate(rows):
     main = k == len(rows) - 1
     ax.errorbar(v["est"], k, xerr=[[v["est"] - v["lo"]], [v["hi"] - v["est"]]],
                 fmt="D" if main else "o", ms=7 if main else 5, color=C["AUG"] if main else INK2,
                 elinewidth=1.6 if main else 1.1, capsize=0)
-    ax.text(0.0102, k, f"{v['est']:+.4f} ({v['lo']:+.4f}, {v['hi']:+.4f})", va="center", fontsize=7.5,
+    ax.text(0.0102, k, f"{v['est']:+.4f} ({v['lo']:+.4f}, {v['hi']:+.4f})".replace("-", "−"), va="center", fontsize=7.5,
             color=INK)
 ax.axvline(0, color=INK2, lw=0.8)
 ax.set_yticks(range(len(rows)), [x[0] for x in rows])
 ax.set_ylim(-0.6, len(rows) + 0.05)
 ax.invert_yaxis()
 ax.set_xlim(-0.011, 0.0175)
-ax.set_xlabel("Δ Brier skill (M-AUG − M-PS); >0 favours augmentation")
-ax.set_title("Figure 2. Primary comparison: augmentation vs pattern submodels (prespecified δ = 0.005)", loc="left",
+ax.set_xlabel("Δ Brier skill (M-AUG − M-PS); >0 favors augmentation")
+ax.set_title("Figure 2. Primary comparison: augmentation vs reduced-feature pattern submodels (prespecified δ = 0.005)", loc="left",
              fontsize=9.5, color=INK)
 save(fig, "fig2_forest_primary")
 
@@ -87,7 +87,7 @@ for ax, met, xl in [(axs[0], "skill", "Brier skill"), (axs[1], "auc", "AUROC")]:
         v = ph[f"{met}_{key}"]
         ax.errorbar(v["est"], k, xerr=[[v["est"] - v["lo"]], [v["hi"] - v["est"]]], fmt="o", ms=5,
                     color=C["AUG"], elinewidth=1.2)
-        ax.text(v["hi"], k, f"  {v['est']:.3f}", va="center", fontsize=7.5, color=INK)
+        ax.text(v["hi"], k, f"  {v['est']:.3f}".replace("-", "−"), va="center", fontsize=7.5, color=INK)
     ax.grid(axis="x", color=GRID, lw=0.6)
     ax.set_xlabel(xl + " (95% CI, JK2)")
 axs[0].set_yticks(range(len(items)), [x[0] for x in items])
